@@ -21,6 +21,11 @@ angular.module('app').config(function($routeProvider, $locationProvider){
       resolve: routeRoleChecks.admin
     })
 
+    .when('/signup', {
+      templateUrl: '/partials/account/signup',
+      controller: 'mvSignupCtrl',
+    })
+
   $locationProvider.html5Mode(true);
 });
 
