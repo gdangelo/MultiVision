@@ -18,10 +18,10 @@
 				.form-group
 					label.col-md-2.control-label(for="lname") Last name
 					.col-md-10
-						input.form-control(name="fname", type="text", placeholder="Last name", ng-model="fname", required)
+						input.form-control(name="lname", type="text", placeholder="Last name", ng-model="lname", required)
 				.form-group
 					.col-md-10.col-md-offset-2
 						.pull-right
-							button.btn-btn-primary(ng-click="signup()", ng-disable="signupForm.$invalid") Submit
+							button.btn.btn-primary(ng-click="signup()", ng-disable="signupForm.$invalid") Submit
 							| &nbsp;
 							a.btn.btn-default(href="/") Cancel

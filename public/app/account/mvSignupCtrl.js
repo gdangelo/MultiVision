@@ -7,12 +7,12 @@ angular.module('app').controller('mvSignupCtrl', function($scope, mvUser, mvNoti
 			firstName: $scope.fname,
 			lastName: $scope.lname
 		};
-	};
 
-	mvAuth.createUser(newUserData).then(function(){
-		mvNotifier.notify('User account created!');
-		$location.path("/");
-	}, function(reason){
-		mvNotifier.error(reason);
-	});
+		mvAuth.createUser(newUserData).then(function(){
+			mvNotifier.notify('User account created!');
+			$location.path("/");
+		}, function(reason){
+			mvNotifier.error(reason);
+		});
+	};
 });

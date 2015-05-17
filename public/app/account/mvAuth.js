@@ -24,7 +24,7 @@ angular.module('app').factory('mvAuth', function($http, mvIdentity, $q, mvUser){
 				mvIdentity.currentUser = newUser;
 				dfd.resolve();
 			}, function(response){
-				$q.reject(response.data.reason);
+				dfd.reject(response.data.reason);
 			});
 
 			return dfd.promise;
