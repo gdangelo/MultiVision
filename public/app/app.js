@@ -40,6 +40,11 @@ angular.module('app').config(function($routeProvider, $locationProvider){
       controller: 'mvCourseListCtrl'
     })
 
+    .when('/courses/:id', {
+      templateUrl: '/partials/courses/course-details',
+      controller: 'mvCourseDetailCtrl'
+    })
+
   $locationProvider.html5Mode(true);
 });
 
